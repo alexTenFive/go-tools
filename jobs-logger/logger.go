@@ -28,13 +28,13 @@ type (
 )
 
 const (
-	// Debug log level - display all types of events
+	// Debug - display all types of events
 	Debug LogLevel = iota
-	// Info log level - display all types of events except Debug
+	// Info - display all types of events except Debug
 	Info
-	// Warning log level - display all types of events except Info, Debug
+	// Warning - display all types of events except Info, Debug
 	Warning
-	// Error log level - display only Error events
+	// Error - display only Error events
 	Error
 )
 
@@ -120,5 +120,5 @@ func (s *Logger) ErrKv(name string, kvs health.Kvs) {
 
 
 func getPrefix(lvl LogLevel) string {
-	return "[" + prefixes[lvl] + "]"
+	return "[" + prefixes[lvl] + "] "
 }
